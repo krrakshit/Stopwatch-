@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.Home{
+    position: relative;
+    min-height: 100vh;
+    background-color: #1f2223;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    overflow: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 90px;
+    font-size: 22px;
+    color: #01fa04;
+    opacity: 0;
+    animation: to-bottom 1s ease forwards;
+}
+h1{
+    color: #01fa04;
+}
+header nav .active,
+header nav a:hover{
+    color: #01fa04;
+}
+
+.btn:hover,
+
+
+.Home img{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+.face{
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    animation: face 1.5s ease forwards;
+}
+.objects{
+    width: 75%;
+    right: -15%;
+    bottom: 50%;
+    margin-bottom: -35%;
+    animation: rotate 25s linear infinite, fade-in 1s ease forwards 1.2s;
+}
+
+
+/* keyframes */
+@keyframes to-bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes to-right {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes face {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes hue-rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+body{
+    animation: hue-rotate 28s linear infinite;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.container{
+    border-radius: 15px;
+    box-shadow: 0 0 10px  #01fa04;
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    margin-left: 64vw;
+    margin-top: 8vh;
+}
+.header{
+    padding: 20px;
+    background-color:  #1f2223;
+    color: white;
+    font-size: 1.2rem;
+
+}
+.display{
+    padding: 20px;
+    font-size: 2.75rem;
+
+}
+button{
+    border: none;
+    background-color: #01fa04;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+.active{
+    background-color: red;
+}
